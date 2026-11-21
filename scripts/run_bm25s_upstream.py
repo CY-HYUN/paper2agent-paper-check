@@ -17,7 +17,13 @@ from pathlib import Path
 
 import bm25s
 import Stemmer
-from bm25s.utils.beir import download_dataset, evaluate, load_corpus, load_qrels, load_queries
+from bm25s.utils.beir import (
+    download_dataset,
+    evaluate,
+    load_corpus,
+    load_qrels,
+    load_queries,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "raw" / "beir"
