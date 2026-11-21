@@ -1,0 +1,30 @@
+{
+  "paper": "BM25S: Orders of magnitude faster lexical search via eager sparse scoring (Lù, 2024)",
+  "arxiv": "2407.03618v1",
+  "repository": "https://github.com/xhluca/bm25s",
+  "metric": "NDCG@10 x 100, rounded to one decimal in the paper",
+  "split": "BEIR test split",
+  "note": "Rows copied from the arXiv HTML of tables 2 and 3 on 2026-11-21; only the four smallest BEIR datasets are kept (AG ArguAna, NF NFCorpus, SD SCIDOCS, SF SciFact). Table 3 rows equal table 2's 'Eng. stop, Snowball' row for Lucene k1=1.5, b=0.75, so table 3 uses English stopwords and the Snowball stemmer.",
+  "rows": [
+    {"table": 2, "method": "lucene", "k1": 1.5, "b": 0.75, "stopwords": "english", "stemmer": "snowball",
+     "values": {"arguana": 49.3, "nfcorpus": 32.1, "scidocs": 15.8, "scifact": 68.7}},
+    {"table": 2, "method": "lucene", "k1": 1.5, "b": 0.75, "stopwords": "english", "stemmer": null,
+     "values": {"arguana": 48.3, "nfcorpus": 30.6, "scidocs": 15.4, "scifact": 66.2}},
+    {"table": 2, "method": "lucene", "k1": 1.5, "b": 0.75, "stopwords": null, "stemmer": "snowball",
+     "values": {"arguana": 47.7, "nfcorpus": 32.0, "scidocs": 15.6, "scifact": 68.5}},
+    {"table": 2, "method": "lucene", "k1": 1.5, "b": 0.75, "stopwords": null, "stemmer": null,
+     "values": {"arguana": 46.8, "nfcorpus": 30.6, "scidocs": 15.2, "scifact": 66.1}},
+    {"table": 3, "method": "lucene", "k1": 0.9, "b": 0.4, "stopwords": "english", "stemmer": "snowball",
+     "values": {"arguana": 40.8, "nfcorpus": 31.8, "scidocs": 15.0, "scifact": 67.6}},
+    {"table": 3, "method": "lucene", "k1": 1.2, "b": 0.75, "stopwords": "english", "stemmer": "snowball",
+     "values": {"arguana": 48.7, "nfcorpus": 31.8, "scidocs": 15.6, "scifact": 68.0}},
+    {"table": 3, "method": "atire", "k1": 1.2, "b": 0.75, "stopwords": "english", "stemmer": "snowball",
+     "values": {"arguana": 48.7, "nfcorpus": 31.8, "scidocs": 15.6, "scifact": 68.1}},
+    {"table": 3, "method": "bm25+", "k1": 1.2, "b": 0.75, "stopwords": "english", "stemmer": "snowball",
+     "values": {"arguana": 48.7, "nfcorpus": 31.8, "scidocs": 15.6, "scifact": 68.1}},
+    {"table": 3, "method": "bm25l", "k1": 1.2, "b": 0.75, "stopwords": "english", "stemmer": "snowball",
+     "values": {"arguana": 49.6, "nfcorpus": 32.2, "scidocs": 15.8, "scifact": 68.7}},
+    {"table": 3, "method": "robertson", "k1": 1.2, "b": 0.75, "stopwords": "english", "stemmer": "snowball",
+     "values": {"arguana": 49.2, "nfcorpus": 31.9, "scidocs": 15.5, "scifact": 68.3}}
+  ]
+}

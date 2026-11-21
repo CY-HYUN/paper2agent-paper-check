@@ -1,0 +1,63 @@
+# OS / IDE / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+nul
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Secrets: commit only .env.example
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*-credentials.json
+*-service-account*.json
+*token*
+*secret*
+
+# Data payload: track structure + READMEs only
+data/raw/*
+data/interim/*
+data/processed/*
+!data/**/.gitkeep
+!data/**/README.md
+
+# Model weights
+models/*
+!models/.gitkeep
+!models/README.md
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.pkl
+*.h5
+*.onnx
+
+# Generated heavy outputs
+results/figures/*
+results/tables/*.csv
+wandb/
+lightning_logs/
+outputs/
+
+# Confidential deliverables: whole dir never pushed
+reports/confidential/
+!reports/confidential/.gitkeep
+
+# Third-party checkouts and run scratch (Paper2Agent clone, run folders copied back)
+_local/
