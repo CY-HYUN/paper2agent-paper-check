@@ -5,8 +5,11 @@ Does a tool that Paper2Agent built and verified still reproduce the numbers prin
 [Paper2Agent](https://github.com/jmiao24/Paper2Agent) (Miao et al., Nature 2026) turns a research repository into
 MCP tools. Its verification compares each tool's output with a run of the repository's own code on the same input
 (`skills/paper2agent/paper2mcp/SKILL.md`, "Run the bound upstream code ... Preserve native results ... for
-comparison"). Nothing in that loop looks at the paper. If the repository has drifted from the paper, or a wrapper
-changes a default, both sides of the comparison move together and the check still passes.
+comparison"). The skill draws that line on purpose: a delivery "does not claim the whole repository or paper has
+been reproduced" (`paper2mcp/references/output-delivery.md`), and paper-to-code work is "outside this conversion
+task" (`tool-selection-and-wrapping.md`). So if the repository has drifted from the paper, or a wrapper changes a
+default, both sides of the comparison move together and the check still passes. This project measures that declared
+gap; it is not a claim that Paper2Agent is wrong.
 
 This project adds a second check whose reference is the paper's table, and counts the tools that pass Paper2Agent's
 check but fail the paper's.
