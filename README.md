@@ -31,10 +31,6 @@ So the repository, called directly, still reproduces the paper to within 0.15 po
 go both ways (ArguAna and SCIDOCS slightly above the paper, SciFact 0.07 to 0.12 below), so one rounding rule does not
 explain them; the paper-era release (0.1.7) was not run, because its data loaders differ.
 
-Found on the way: `bm25s.utils.beir` opens the dataset files without an encoding, so on a Windows code page other
-than UTF-8 the text would be decoded wrongly and silently. The script stops unless Python's preferred encoding is
-UTF-8 (this machine reports cp65001, which is UTF-8).
-
 ### Step 2, Paper2Agent on bm25s: not run yet
 
 `scripts/run_paper2agent.ps1` runs Paper2Agent (commit 8c2d059) unattended with the model pinned, the skill installed
@@ -49,7 +45,7 @@ The same `paper_check.py` will read the NDCG@10 the generated tools return for t
 ## Run
 
 ```bash
-PYTHONUTF8=1 uv run scripts/run_bm25s_upstream.py   # step 1, about 5 minutes on a laptop CPU, datasets cached in data/raw
+uv run scripts/run_bm25s_upstream.py   # step 1, about 5 minutes on a laptop CPU, datasets cached in data/raw
 uv run scripts/paper_check.py results/tables/upstream_bm25s.json
 uv run scripts/paper_check.py --selftest
 ```

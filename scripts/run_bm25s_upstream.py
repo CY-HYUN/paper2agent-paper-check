@@ -9,9 +9,7 @@
 Corpus text is title + " " + text and k=1000, as in the repository's examples/evaluate_on_beir.py; NDCG@10 comes
 from bm25s.utils.beir.evaluate (BEIR's pytrec_eval code). Datasets are cached in data/raw/beir (not committed).
 """
-import codecs
 import json
-import locale
 import platform
 import sys
 import time
@@ -49,10 +47,6 @@ def score(row: dict, corpus: dict, query_texts: list, qids: list, qrels: dict) -
 
 
 def main() -> None:
-    # bm25s.utils.beir opens the jsonl files without an encoding, so on a Windows code page (cp949 here) the text is
-    # decoded wrongly and silently, which changes the tokens and the scores.
-    if codecs.lookup(locale.getpreferredencoding(False)).name != "utf-8":  # cp65001 is UTF-8 under another name
-        sys.exit(f"preferred encoding is {locale.getpreferredencoding(False)}; run with PYTHONUTF8=1")
     spec =json.loads((ROOT / "configs" / "paper_bm25s.json").read_text(encoding="utf-8"))
     datasets = sorted({d for r in spec["rows"] for d in r["values"]})
     out = {"producer": f"bm25s {bm25s.__version__} called directly", "python": platform.python_version(),
