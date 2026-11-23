@@ -34,16 +34,35 @@ So the repository, called directly, still reproduces the paper to within 0.15 po
 go both ways (ArguAna and SCIDOCS slightly above the paper, SciFact 0.07 to 0.12 below), so one rounding rule does not
 explain them; the paper-era release (0.1.7) was not run, because its data loaders differ.
 
-### Step 2, Paper2Agent on bm25s: not run yet
+### Step 2, Paper2Agent on bm25s (2026-11-23)
 
-`scripts/run_paper2agent.ps1` runs Paper2Agent (commit 8c2d059) unattended with the model pinned, the skill installed
-for the run directory only, and bm25s pinned at commit b335013. A first start on 2026-11-21 was stopped after about
-90 seconds on purpose: the account had used 84% of its weekly limit, and a multi-agent run could take the rest before
-the weekly reset.
+`scripts/run_paper2agent.ps1` ran Paper2Agent (commit 8c2d059) unattended on Windows with Claude Opus 5.5 pinned, the
+skill installed for the run directory only, and bm25s pinned at commit b335013. It finished in about 73 minutes
+(20:44 to 21:58 UTC) and delivered `bm25s-mcp.zip` with three tools: `bm25s_evaluate_beir_dataset`,
+`bm25s_index_corpus` and `bm25s_retrieve_from_index`. Its own report: 119 tests written by agents that did not write
+the code, all passing, and the tools' results identical to its reference runs of the upstream examples. The run's
+result event reports an API-equivalent cost of USD 17.02 (the run used a subscription, so this is a size, not a bill).
+A first start on 2026-11-21 had been stopped after about 90 seconds because the weekly limit was at 84%.
 
-### Step 3, the paper check on the generated tools: after step 2
+### Step 3, the paper check on the generated tools (2026-11-23)
 
-The same `paper_check.py` will read the NDCG@10 the generated tools return for the 40 settings.
+`scripts/run_paper2agent_tools.py` starts the generated server unchanged, with the Python environment Paper2Agent
+prepared, and calls `bm25s_evaluate_beir_dataset` over stdio for all 40 paper cells.
+
+| | match | near | mismatch |
+|---|---|---|---|
+| bm25s called directly (step 1) | 23 | 17 | 0 |
+| the Paper2Agent tool | 23 | 17 | 0 |
+
+The tool's NDCG@10 equals the direct run's in all 40 cells (no difference at full float precision), so it inherits the
+repository's agreement with the paper. For this pilot the count this project asks for is **0 tools that pass
+Paper2Agent's check and fail the paper's**. The other two tools (index, retrieve) have no number in the paper, so the
+paper check does not apply to them.
+
+What the null result does and does not say: here the repository itself still reproduces the paper, and the tool
+wraps it without changing a default that matters. The second check can only catch a gap when there is one; one small,
+deterministic repository is not evidence that Paper2Agent never drifts from a paper. A repository whose code has moved
+away from its paper is the next test.
 
 ## Run
 
@@ -51,6 +70,9 @@ The same `paper_check.py` will read the NDCG@10 the generated tools return for t
 uv run scripts/run_bm25s_upstream.py   # step 1, about 5 minutes on a laptop CPU, datasets cached in data/raw
 uv run scripts/paper_check.py results/tables/upstream_bm25s.json
 uv run scripts/paper_check.py --selftest
+pwsh scripts/run_paper2agent.ps1 -RunDir <new folder>          # step 2, Windows, Claude Code signed in
+<bm25s_Agent>/bm25s-env/Scripts/python.exe scripts/run_paper2agent_tools.py <bm25s_Agent>   # step 3
+uv run scripts/paper_check.py results/tables/paper2agent_bm25s.json
 ```
 
 ## Folder map

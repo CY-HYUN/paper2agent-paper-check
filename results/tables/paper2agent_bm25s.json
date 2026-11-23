@@ -1,0 +1,406 @@
+{
+ "producer": "Paper2Agent-generated MCP server at bm25s_Agent, tool bm25s_evaluate_beir_dataset, called over stdio",
+ "started": "2026-11-23T22:15:14Z",
+ "rows": [
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "arguana",
+   "ndcg10": 0.49289
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "nfcorpus",
+   "ndcg10": 0.32102
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scidocs",
+   "ndcg10": 0.15777
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scifact",
+   "ndcg10": 0.6863
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": null,
+   "dataset": "arguana",
+   "ndcg10": 0.48274
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": null,
+   "dataset": "nfcorpus",
+   "ndcg10": 0.30641
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": null,
+   "dataset": "scidocs",
+   "ndcg10": 0.15376
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": null,
+   "dataset": "scifact",
+   "ndcg10": 0.66169
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": null,
+   "stemmer": "snowball",
+   "dataset": "arguana",
+   "ndcg10": 0.47822
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": null,
+   "stemmer": "snowball",
+   "dataset": "nfcorpus",
+   "ndcg10": 0.31954
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": null,
+   "stemmer": "snowball",
+   "dataset": "scidocs",
+   "ndcg10": 0.15605
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": null,
+   "stemmer": "snowball",
+   "dataset": "scifact",
+   "ndcg10": 0.68405
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": null,
+   "stemmer": null,
+   "dataset": "arguana",
+   "ndcg10": 0.46826
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": null,
+   "stemmer": null,
+   "dataset": "nfcorpus",
+   "ndcg10": 0.30629
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": null,
+   "stemmer": null,
+   "dataset": "scidocs",
+   "ndcg10": 0.15171
+  },
+  {
+   "table": 2,
+   "method": "lucene",
+   "k1": 1.5,
+   "b": 0.75,
+   "stopwords": null,
+   "stemmer": null,
+   "dataset": "scifact",
+   "ndcg10": 0.66132
+  },
+  {
+   "table": 3,
+   "method": "lucene",
+   "k1": 0.9,
+   "b": 0.4,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "arguana",
+   "ndcg10": 0.408
+  },
+  {
+   "table": 3,
+   "method": "lucene",
+   "k1": 0.9,
+   "b": 0.4,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "nfcorpus",
+   "ndcg10": 0.31771
+  },
+  {
+   "table": 3,
+   "method": "lucene",
+   "k1": 0.9,
+   "b": 0.4,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scidocs",
+   "ndcg10": 0.15052
+  },
+  {
+   "table": 3,
+   "method": "lucene",
+   "k1": 0.9,
+   "b": 0.4,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scifact",
+   "ndcg10": 0.67619
+  },
+  {
+   "table": 3,
+   "method": "lucene",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "arguana",
+   "ndcg10": 0.48778
+  },
+  {
+   "table": 3,
+   "method": "lucene",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "nfcorpus",
+   "ndcg10": 0.31804
+  },
+  {
+   "table": 3,
+   "method": "lucene",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scidocs",
+   "ndcg10": 0.1565
+  },
+  {
+   "table": 3,
+   "method": "lucene",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scifact",
+   "ndcg10": 0.67909
+  },
+  {
+   "table": 3,
+   "method": "atire",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "arguana",
+   "ndcg10": 0.48773
+  },
+  {
+   "table": 3,
+   "method": "atire",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "nfcorpus",
+   "ndcg10": 0.31812
+  },
+  {
+   "table": 3,
+   "method": "atire",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scidocs",
+   "ndcg10": 0.15658
+  },
+  {
+   "table": 3,
+   "method": "atire",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scifact",
+   "ndcg10": 0.68006
+  },
+  {
+   "table": 3,
+   "method": "bm25+",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "arguana",
+   "ndcg10": 0.48773
+  },
+  {
+   "table": 3,
+   "method": "bm25+",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "nfcorpus",
+   "ndcg10": 0.31812
+  },
+  {
+   "table": 3,
+   "method": "bm25+",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scidocs",
+   "ndcg10": 0.15658
+  },
+  {
+   "table": 3,
+   "method": "bm25+",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scifact",
+   "ndcg10": 0.68006
+  },
+  {
+   "table": 3,
+   "method": "bm25l",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "arguana",
+   "ndcg10": 0.49632
+  },
+  {
+   "table": 3,
+   "method": "bm25l",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "nfcorpus",
+   "ndcg10": 0.32192
+  },
+  {
+   "table": 3,
+   "method": "bm25l",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scidocs",
+   "ndcg10": 0.15792
+  },
+  {
+   "table": 3,
+   "method": "bm25l",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scifact",
+   "ndcg10": 0.68598
+  },
+  {
+   "table": 3,
+   "method": "robertson",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "arguana",
+   "ndcg10": 0.49287
+  },
+  {
+   "table": 3,
+   "method": "robertson",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "nfcorpus",
+   "ndcg10": 0.31912
+  },
+  {
+   "table": 3,
+   "method": "robertson",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scidocs",
+   "ndcg10": 0.15556
+  },
+  {
+   "table": 3,
+   "method": "robertson",
+   "k1": 1.2,
+   "b": 0.75,
+   "stopwords": "english",
+   "stemmer": "snowball",
+   "dataset": "scifact",
+   "ndcg10": 0.68182
+  }
+ ]
+}
