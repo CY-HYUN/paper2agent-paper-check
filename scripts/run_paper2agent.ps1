@@ -2,7 +2,7 @@
 # only, one prompt), with the model pinned. Launcher for this machine: Windows, Claude Code signed in with a
 # subscription, run directory outside the workspace so no workspace CLAUDE.md is picked up.
 #
-#   pwsh scripts/run_paper2agent.ps1 -RunDir D:\p2a_runs\001_bm25s
+#   pwsh scripts/run_paper2agent.ps1 -RunDir <new folder outside the workspace>\001_bm25s
 #
 # --setting-sources project skips the user settings (and so the personal hooks and stop gates); the user CLAUDE.md
 # is still read by Claude Code, so the appended system prompt says it does not apply. That is a known difference

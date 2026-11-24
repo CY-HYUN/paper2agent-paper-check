@@ -111,4 +111,4 @@ uv run --no-project --with numpy python scripts/vader_paper_check.py results/vad
 ## Folder map
 
 `configs/` the paper's numbers · `scripts/` the runs and the check · `results/tables/` measured rows ·
-`docs/` method notes · `_local/` third-party checkouts and run scratch (not committed).
+`data/raw/` cached datasets (not committed) · `_local/` third-party checkouts and run scratch (not committed).
