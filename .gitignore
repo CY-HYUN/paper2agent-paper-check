@@ -50,6 +50,7 @@ models/*
 
 # Generated heavy outputs
 results/figures/*
+!results/figures/*.svg
 results/tables/*.csv
 wandb/
 lightning_logs/

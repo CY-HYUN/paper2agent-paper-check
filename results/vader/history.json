@@ -1,0 +1,717 @@
+{
+ "what": "Table 4 r per vaderSentiment commit that touched vaderSentiment/",
+ "paper_r": {
+  "tweets": 0.881,
+  "movieReviewSnippets": 0.451,
+  "amazonReviewSnippets": 0.565,
+  "nytEditorialSnippets": 0.492
+ },
+ "rows": [
+  {
+   "commit": "fb3a8a5",
+   "date": "2014-11-17",
+   "subject": "Initial public (beta) release",
+   "r": {
+    "tweets": 0.8812,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "seconds": 20.9
+  },
+  {
+   "commit": "fc9fd84",
+   "date": "2014-12-13",
+   "subject": "a few clarification fixes- I moved the functions defined within other functions to their o",
+   "r": {
+    "tweets": 0.8812,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 60.9
+  },
+  {
+   "commit": "62b81d3",
+   "date": "2014-12-13",
+   "subject": "oops, missed a piece of the unicode conversion",
+   "r": {
+    "tweets": 0.8812,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 50.2
+  },
+  {
+   "commit": "0fca886",
+   "date": "2016-12-09",
+   "subject": "Update for Python 3, performance, multi-language examples",
+   "error": "FileNotFoundError: [Errno 2] No such file or directory: 'vader_lexicon.txt'",
+   "seconds": 5.2
+  },
+  {
+   "commit": "e8b9b80",
+   "date": "2016-12-09",
+   "subject": "updated filename",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 6,
+    "movieReviewSnippets": 1,
+    "amazonReviewSnippets": 1,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 10.2
+  },
+  {
+   "commit": "1f97886",
+   "date": "2016-12-10",
+   "subject": "update",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 13.6
+  },
+  {
+   "commit": "f0694ba",
+   "date": "2016-12-10",
+   "subject": "update",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 14.4
+  },
+  {
+   "commit": "7fc58f8",
+   "date": "2016-12-10",
+   "subject": "update",
+   "error": "FileNotFoundError: [Errno 2] No such file or directory: 'lexicon\\\\vader_lexicon.txt'",
+   "seconds": 1.4
+  },
+  {
+   "commit": "51c36d2",
+   "date": "2016-12-10",
+   "subject": "update",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 10.7
+  },
+  {
+   "commit": "abfaa1d",
+   "date": "2016-12-13",
+   "subject": "default encoding to utf-8",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 32,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 9.5
+  },
+  {
+   "commit": "c591771",
+   "date": "2017-09-22",
+   "subject": "Fixed issue reading lexicon as UTF-8 when using Canopy",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 9.3
+  },
+  {
+   "commit": "c68d846",
+   "date": "2017-10-19",
+   "subject": "for safety reasons",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 9.9
+  },
+  {
+   "commit": "b16e5f2",
+   "date": "2018-04-19",
+   "subject": "Added support for emoji recognition (UTF-8 encoded)",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 7.0
+  },
+  {
+   "commit": "03def7a",
+   "date": "2018-04-19",
+   "subject": "Update to handle emojis",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 1,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 12.4
+  },
+  {
+   "commit": "89f4dc6",
+   "date": "2018-04-19",
+   "subject": "Adding support for markdown for PyPi distro",
+   "r": {
+    "tweets": 0.8786,
+    "movieReviewSnippets": 0.4165,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4915
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 11.8
+  },
+  {
+   "commit": "c3c715e",
+   "date": "2018-04-22",
+   "subject": "Bug fixes and feature enhancements related to negations",
+   "r": {
+    "tweets": 0.8785,
+    "movieReviewSnippets": 0.4197,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4897
+   },
+   "changed_vs_prev": {
+    "tweets": 87,
+    "movieReviewSnippets": 203,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 225
+   },
+   "seconds": 13.4
+  },
+  {
+   "commit": "47d7dd7",
+   "date": "2018-09-06",
+   "subject": "Fixed emoji to text conversion for emoji not surrounded by whitespace",
+   "r": {
+    "tweets": 0.8785,
+    "movieReviewSnippets": 0.4197,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4897
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 9.0
+  },
+  {
+   "commit": "55fcc4c",
+   "date": "2018-09-06",
+   "subject": "Updated punctuation removal method to work for more cases",
+   "r": {
+    "tweets": 0.8761,
+    "movieReviewSnippets": 0.4212,
+    "amazonReviewSnippets": 0.5704,
+    "nytEditorialSnippets": 0.4923
+   },
+   "changed_vs_prev": {
+    "tweets": 257,
+    "movieReviewSnippets": 370,
+    "amazonReviewSnippets": 128,
+    "nytEditorialSnippets": 155
+   },
+   "seconds": 4.1
+  },
+  {
+   "commit": "7dea90f",
+   "date": "2018-11-30",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8785,
+    "movieReviewSnippets": 0.4197,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4897
+   },
+   "changed_vs_prev": {
+    "tweets": 257,
+    "movieReviewSnippets": 370,
+    "amazonReviewSnippets": 128,
+    "nytEditorialSnippets": 155
+   },
+   "seconds": 8.9
+  },
+  {
+   "commit": "3b14643",
+   "date": "2019-08-06",
+   "subject": "modify Chinese translation",
+   "r": {
+    "tweets": 0.8785,
+    "movieReviewSnippets": 0.4197,
+    "amazonReviewSnippets": 0.5709,
+    "nytEditorialSnippets": 0.4897
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 10.0
+  },
+  {
+   "commit": "3b92578",
+   "date": "2019-08-06",
+   "subject": "Merge pull request #57 from ckw017/master",
+   "r": {
+    "tweets": 0.8761,
+    "movieReviewSnippets": 0.4212,
+    "amazonReviewSnippets": 0.5704,
+    "nytEditorialSnippets": 0.4923
+   },
+   "changed_vs_prev": {
+    "tweets": 257,
+    "movieReviewSnippets": 370,
+    "amazonReviewSnippets": 128,
+    "nytEditorialSnippets": 155
+   },
+   "seconds": 4.6
+  },
+  {
+   "commit": "a32c00e",
+   "date": "2019-08-06",
+   "subject": "Merge pull request #33 from kootenpv/patch-1",
+   "r": {
+    "tweets": 0.8761,
+    "movieReviewSnippets": 0.4212,
+    "amazonReviewSnippets": 0.5704,
+    "nytEditorialSnippets": 0.4923
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 4.6
+  },
+  {
+   "commit": "80acbce",
+   "date": "2019-08-06",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8761,
+    "movieReviewSnippets": 0.4212,
+    "amazonReviewSnippets": 0.5704,
+    "nytEditorialSnippets": 0.4923
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 5.2
+  },
+  {
+   "commit": "8e25801",
+   "date": "2019-08-06",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8761,
+    "movieReviewSnippets": 0.4212,
+    "amazonReviewSnippets": 0.5704,
+    "nytEditorialSnippets": 0.4923
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 7.0
+  },
+  {
+   "commit": "63471fb",
+   "date": "2019-08-06",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8754,
+    "movieReviewSnippets": 0.4221,
+    "amazonReviewSnippets": 0.5712,
+    "nytEditorialSnippets": 0.4935
+   },
+   "changed_vs_prev": {
+    "tweets": 46,
+    "movieReviewSnippets": 65,
+    "amazonReviewSnippets": 25,
+    "nytEditorialSnippets": 7
+   },
+   "seconds": 7.2
+  },
+  {
+   "commit": "a858e56",
+   "date": "2019-08-06",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8754,
+    "movieReviewSnippets": 0.4221,
+    "amazonReviewSnippets": 0.5712,
+    "nytEditorialSnippets": 0.4935
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 8.8
+  },
+  {
+   "commit": "35cc286",
+   "date": "2019-08-10",
+   "subject": "Update vader_lexicon.txt",
+   "r": {
+    "tweets": 0.8754,
+    "movieReviewSnippets": 0.4211,
+    "amazonReviewSnippets": 0.5717,
+    "nytEditorialSnippets": 0.4937
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 26,
+    "amazonReviewSnippets": 2,
+    "nytEditorialSnippets": 2
+   },
+   "seconds": 6.6
+  },
+  {
+   "commit": "b045da3",
+   "date": "2019-08-10",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8754,
+    "movieReviewSnippets": 0.4212,
+    "amazonReviewSnippets": 0.5718,
+    "nytEditorialSnippets": 0.4938
+   },
+   "changed_vs_prev": {
+    "tweets": 14,
+    "movieReviewSnippets": 54,
+    "amazonReviewSnippets": 9,
+    "nytEditorialSnippets": 13
+   },
+   "seconds": 5.4
+  },
+  {
+   "commit": "9f55c11",
+   "date": "2019-08-22",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8754,
+    "movieReviewSnippets": 0.4212,
+    "amazonReviewSnippets": 0.5718,
+    "nytEditorialSnippets": 0.4938
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 6.6
+  },
+  {
+   "commit": "639c165",
+   "date": "2019-09-05",
+   "subject": "Check for \"no\" as negation for an adjacent lexicon item vs \"no\" as its own stand-alone lex",
+   "error": "IndexError: list index out of range",
+   "seconds": 1.5
+  },
+  {
+   "commit": "5a6ccd9",
+   "date": "2019-09-05",
+   "subject": "Handling no as negation",
+   "error": "IndexError: list index out of range",
+   "seconds": 2.1
+  },
+  {
+   "commit": "10fef35",
+   "date": "2020-01-29",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8731,
+    "movieReviewSnippets": 0.4237,
+    "amazonReviewSnippets": 0.5903,
+    "nytEditorialSnippets": 0.5023
+   },
+   "changed_vs_prev": {
+    "tweets": 39,
+    "movieReviewSnippets": 130,
+    "amazonReviewSnippets": 62,
+    "nytEditorialSnippets": 55
+   },
+   "seconds": 6.6
+  },
+  {
+   "commit": "e7bb4c2",
+   "date": "2020-03-20",
+   "subject": "update special case idioms to include other phrase",
+   "r": {
+    "tweets": 0.8731,
+    "movieReviewSnippets": 0.4237,
+    "amazonReviewSnippets": 0.5903,
+    "nytEditorialSnippets": 0.5023
+   },
+   "changed_vs_prev": {
+    "tweets": 1,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 1
+   },
+   "seconds": 5.5
+  },
+  {
+   "commit": "3175ee4",
+   "date": "2020-03-20",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8731,
+    "movieReviewSnippets": 0.4237,
+    "amazonReviewSnippets": 0.5903,
+    "nytEditorialSnippets": 0.5023
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 6.8
+  },
+  {
+   "commit": "c5a6bb5",
+   "date": "2020-04-16",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8731,
+    "movieReviewSnippets": 0.4238,
+    "amazonReviewSnippets": 0.5903,
+    "nytEditorialSnippets": 0.5023
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 1,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 7.3
+  },
+  {
+   "commit": "0b8040f",
+   "date": "2020-05-22",
+   "subject": "add text transaltion for emotion emoji (hearts)",
+   "r": {
+    "tweets": 0.8722,
+    "movieReviewSnippets": 0.4274,
+    "amazonReviewSnippets": 0.5896,
+    "nytEditorialSnippets": 0.5029
+   },
+   "changed_vs_prev": {
+    "tweets": 15,
+    "movieReviewSnippets": 143,
+    "amazonReviewSnippets": 1,
+    "nytEditorialSnippets": 21
+   },
+   "seconds": 11.9
+  },
+  {
+   "commit": "0150f59",
+   "date": "2020-05-22",
+   "subject": "Update vaderSentiment.py",
+   "r": {
+    "tweets": 0.8722,
+    "movieReviewSnippets": 0.4276,
+    "amazonReviewSnippets": 0.5896,
+    "nytEditorialSnippets": 0.5029
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 3,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 7.3
+  },
+  {
+   "commit": "cd8ea3b",
+   "date": "2022-03-31",
+   "subject": "added check for translation is not none to prevent error",
+   "r": {
+    "tweets": 0.8722,
+    "movieReviewSnippets": 0.4276,
+    "amazonReviewSnippets": 0.5896,
+    "nytEditorialSnippets": 0.5029
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 7.6
+  },
+  {
+   "commit": "54b9906",
+   "date": "2022-03-31",
+   "subject": "formatting fixed",
+   "r": {
+    "tweets": 0.8722,
+    "movieReviewSnippets": 0.4276,
+    "amazonReviewSnippets": 0.5896,
+    "nytEditorialSnippets": 0.5029
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 7.7
+  },
+  {
+   "commit": "26837f8",
+   "date": "2022-03-31",
+   "subject": "undid style formatting",
+   "r": {
+    "tweets": 0.8722,
+    "movieReviewSnippets": 0.4276,
+    "amazonReviewSnippets": 0.5896,
+    "nytEditorialSnippets": 0.5029
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 8.4
+  },
+  {
+   "commit": "9c308a4",
+   "date": "2026-01-29",
+   "subject": "Improve text handling in VaderSentiment initialization",
+   "r": {
+    "tweets": 0.8722,
+    "movieReviewSnippets": 0.4276,
+    "amazonReviewSnippets": 0.5896,
+    "nytEditorialSnippets": 0.5029
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 7.9
+  },
+  {
+   "commit": "1e1bfe2",
+   "date": "2026-03-02",
+   "subject": "Use set for faster negation lookups",
+   "r": {
+    "tweets": 0.8722,
+    "movieReviewSnippets": 0.4276,
+    "amazonReviewSnippets": 0.5896,
+    "nytEditorialSnippets": 0.5029
+   },
+   "changed_vs_prev": {
+    "tweets": 0,
+    "movieReviewSnippets": 0,
+    "amazonReviewSnippets": 0,
+    "nytEditorialSnippets": 0
+   },
+   "seconds": 10.0
+  }
+ ]
+}

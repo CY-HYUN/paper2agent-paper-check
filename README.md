@@ -14,6 +14,15 @@ gap; it is not a claim that Paper2Agent is wrong.
 This project adds a second check whose reference is the paper's table, and counts the tools that pass Paper2Agent's
 check but fail the paper's.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="results/figures/vader_paper_gap_dark.svg">
+  <img alt="Distance from the VADER paper's printed Pearson r: the 2014 code sits on the paper's value for tweets and NYT editorials; today's code and the Paper2Agent tool built from it sit 0.009 below and 0.011 above." src="results/figures/vader_paper_gap_light.svg">
+</picture>
+
+Result so far: on [bm25s](#pilot-bm25s-arxiv-240703618) the tool reproduces the paper (0 caught); on
+[VADER](#second-repository-vader-a-repository-that-drifted-from-its-paper-2026-11-24) it passes Paper2Agent's own
+tests (self-reported) and misses the paper on 2 of 4 corpora, because the repository's code changed after the paper.
+
 ## Pilot: BM25S (arXiv 2407.03618)
 
 [bm25s](https://github.com/xhluca/bm25s) is small, CPU-only and deterministic, and its paper prints NDCG@10 for every
@@ -81,6 +90,10 @@ because the paper prints 3 decimals). F1 is not checked: the paper does not say 
 - **Tweets and NYT: drift since the paper, caught.** The 2014 code (ported to Python 3 with 4 edits,
   `scripts/vader_2014_vs_now.py`) reproduces the paper; the current code does not (471 and 460 sentences changed
   score by more than 0.0001).
+- **When it drifted** (`scripts/vader_history.py`, `results/vader/history.json`): every commit that touched the package
+  was scored (38 of 42; 2 point at a lexicon file that is not in that commit, 2 raise inside the code). The first public
+  commit (2014-11-17) gives the paper's 0.881 on tweets. On the main line it then moves in small steps, 0.879 in
+  Dec 2016, 0.876 when PR #57 was merged in Aug 2019, 0.873 in Jan 2020, 0.872 from May 2020. No single commit explains it.
 - **Movies and Amazon: marked `paper_row_suspect`, not counted as drift.** The 2014 code misses the paper's VADER row
   too, and its values equal the paper's Hu-Liu04 row for those corpora (0.416, 0.571). Observation only; Hu-Liu04
   was not run.
@@ -90,6 +103,14 @@ because the paper prints 3 decimals). F1 is not checked: the paper does not say 
   `vader_score_text_file_lines` once per corpus. The tool's scores equal the direct run's for all 23,703 sentences.
   So the tool passes Paper2Agent's check and **fails the paper's on 2 of 4 corpora**, the first non-zero count of
   this project. The cause is the repository's drift, not the wrapper.
+
+## Limits
+
+- Two repositories, one of which drifted: this shows the gap can happen, not how often.
+- The paper's numbers are typed in by hand from its tables (`configs/`), read by one person. Reading them out of the
+  PDF automatically is a project of its own and is not attempted here.
+- Paper2Agent's own test counts are its report; what this repository checks directly is that each tool's output equals
+  a direct run of the same repository commit.
 
 ## Run
 
