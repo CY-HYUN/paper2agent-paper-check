@@ -1,0 +1,18 @@
+{
+ "what": "VADER (Hutto & Gilbert, ICWSM-14) Table 4 Pearson r of compound vs ground-truth mean, four corpora from hutto_ICWSM_2014.tar.gz (repo cjhutto/vaderSentiment additional_resources)",
+ "date": "2026-11-24",
+ "command": "uv run --no-project --with vaderSentiment --with numpy python -I scripts/vader_2014_vs_now.py <extracted hutto_ICWSM_2014 dir>",
+ "code_2014": "vaderSentiment.py inside the tarball, ported to Python 3 with 4 edits (script header)",
+ "code_now": "pip vaderSentiment 3.3.2",
+ "rows": [
+  {"corpus": "tweets", "n": 4200, "paper": 0.881, "code_2014": 0.881, "code_now": 0.872, "scores_changed": 471},
+  {"corpus": "movieReviewSnippets", "n": 10605, "paper": 0.451, "code_2014": 0.416, "code_now": 0.427, "scores_changed": 926},
+  {"corpus": "amazonReviewSnippets", "n": 3708, "paper": 0.565, "code_2014": 0.571, "code_now": 0.590, "scores_changed": 214},
+  {"corpus": "nytEditorialSnippets", "n": 5190, "paper": 0.492, "code_2014": 0.492, "code_now": 0.503, "scores_changed": 460}
+ ],
+ "reading": [
+  "tweets and NYT: the 2014 code reproduces the paper to 3 decimals and the current package does not (-0.009, +0.011): drift in the code since the paper.",
+  "movies and Amazon: the 2014 code does not reproduce the paper's VADER row either; its values (0.416, 0.571) equal the paper's Hu-Liu04 row for those corpora. Observation only, not checked further (no Hu-Liu04 run).",
+  "F1 is not used: the paper does not say how the ground truth is put into 3 classes."
+ ]
+}
