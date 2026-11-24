@@ -1,0 +1,13 @@
+{
+ "paper": "Hutto & Gilbert, VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text, ICWSM-14",
+ "source": "Table 4 (an image in vader_icwsm2014_final.pdf inside hutto_ICWSM_2014.tar.gz), column 'Correlation to ground truth', VADER row; tweets also in the section 4 text (r = 0.881)",
+ "metric": "Pearson r between VADER compound and the ground-truth mean of 20 raters, all rows of <corpus>_GroundTruth.txt",
+ "tolerance": 0.0005,
+ "tolerance_why": "the paper prints 3 decimals; the 2014 code shipped with the paper reproduces tweets and NYT within it",
+ "rows": [
+  {"corpus": "tweets", "n": 4200, "paper_r": 0.881, "code_2014_r": 0.881},
+  {"corpus": "movieReviewSnippets", "n": 10605, "paper_r": 0.451, "code_2014_r": 0.416},
+  {"corpus": "amazonReviewSnippets", "n": 3708, "paper_r": 0.565, "code_2014_r": 0.571},
+  {"corpus": "nytEditorialSnippets", "n": 5190, "paper_r": 0.492, "code_2014_r": 0.492}
+ ]
+}

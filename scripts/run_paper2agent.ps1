@@ -13,14 +13,15 @@ param(
     [string]$SkillSrc = (Join-Path $PSScriptRoot "..\_local\Paper2Agent\skills\paper2agent"),
     [string]$Repo = "https://github.com/xhluca/bm25s",
     [string]$Commit = "b335013d0172e8c2aabd1399d60146cc51768458",
-    [string]$Focus = "the BEIR evaluation workflow in examples/evaluate_on_beir.py (index a BEIR dataset with a chosen BM25 variant, k1, b, stopwords and stemmer, retrieve, and report NDCG@10), plus indexing and retrieval on a user corpus"
+    [string]$Focus = "the BEIR evaluation workflow in examples/evaluate_on_beir.py (index a BEIR dataset with a chosen BM25 variant, k1, b, stopwords and stemmer, retrieve, and report NDCG@10), plus indexing and retrieval on a user corpus",
+    [string]$AgentName = "bm25s_Agent"
 )
 $ErrorActionPreference = "Stop"
 if (Test-Path $RunDir) { throw "$RunDir exists; use a new run directory" }
 New-Item -ItemType Directory -Force (Join-Path $RunDir ".claude\skills") | Out-Null
 Copy-Item -Recurse $SkillSrc (Join-Path $RunDir ".claude\skills\paper2agent")
 $prompt = @"
-Use the paper2agent skill to convert the research code repository $Repo (check out commit $Commit) into tested MCP tools in $RunDir\bm25s_Agent.
+Use the paper2agent skill to convert the research code repository $Repo (check out commit $Commit) into tested MCP tools in $RunDir\$AgentName.
 Focus on $Focus.
 Resources: CPU only, no GPU, about 12 GB of RAM free. No API keys are needed. Do not ask questions; every required input is above. Follow the skill instructions for the workflow, verification, and final delivery.
 "@
