@@ -64,6 +64,33 @@ wraps it without changing a default that matters. The second check can only catc
 deterministic repository is not evidence that Paper2Agent never drifts from a paper. A repository whose code has moved
 away from its paper is the next test.
 
+## Second repository: VADER, a repository that drifted from its paper (2026-11-24)
+
+[vaderSentiment](https://github.com/cjhutto/vaderSentiment) (Hutto & Gilbert, ICWSM 2014) ships the paper's four
+evaluation corpora and the 2014 code in `additional_resources/hutto_ICWSM_2014.tar.gz`. The paper's Table 4 prints the
+Pearson r between VADER's compound score and the mean of 20 human raters (`configs/paper_vader.json`, tolerance 0.0005
+because the paper prints 3 decimals). F1 is not checked: the paper does not say how the ground truth is put in 3 classes.
+
+| corpus (rows) | paper | 2014 code | repo at 44fc044, direct | Paper2Agent tool |
+|---|---|---|---|---|
+| tweets (4,200) | 0.881 | 0.8812 match | 0.8722 mismatch | 0.8722 mismatch |
+| NYT editorials (5,190) | 0.492 | 0.4915 match | 0.5029 mismatch | 0.5029 mismatch |
+| movie reviews (10,605) | 0.451 | 0.4165 | 0.4276 | 0.4276 |
+| Amazon reviews (3,708) | 0.565 | 0.5709 | 0.5896 | 0.5896 |
+
+- **Tweets and NYT: drift since the paper, caught.** The 2014 code (ported to Python 3 with 4 edits,
+  `scripts/vader_2014_vs_now.py`) reproduces the paper; the current code does not (471 and 460 sentences changed
+  score by more than 0.0001).
+- **Movies and Amazon: marked `paper_row_suspect`, not counted as drift.** The 2014 code misses the paper's VADER row
+  too, and its values equal the paper's Hu-Liu04 row for those corpora (0.416, 0.571). Observation only; Hu-Liu04
+  was not run.
+- **Paper2Agent** (same launcher, commit 44fc044, 03:55 to 04:26 Paris time, API-equivalent USD 8.02) built two tools.
+  Its own checks passed: 156 tests against direct upstream calls (200 of the tweets among them), 15 of 15 server
+  calls. It also noticed that 2 of 16 README example outputs are out of date. `scripts/run_vader_tools.py` calls
+  `vader_score_text_file_lines` once per corpus. The tool's scores equal the direct run's for all 23,703 sentences.
+  So the tool passes Paper2Agent's check and **fails the paper's on 2 of 4 corpora**, the first non-zero count of
+  this project. The cause is the repository's drift, not the wrapper.
+
 ## Run
 
 ```bash
@@ -73,6 +100,12 @@ uv run scripts/paper_check.py --selftest
 pwsh scripts/run_paper2agent.ps1 -RunDir <new folder>          # step 2, Windows, Claude Code signed in
 <bm25s_Agent>/bm25s-env/Scripts/python.exe scripts/run_paper2agent_tools.py <bm25s_Agent>   # step 3
 uv run scripts/paper_check.py results/tables/paper2agent_bm25s.json
+# VADER: extract hutto_ICWSM_2014.tar.gz from the repo's additional_resources to <hutto>
+uv run --no-project --with numpy python scripts/vader_direct_scores.py <hutto> results/vader/scores_code_2014.json --code-2014
+uv run --no-project --with "vaderSentiment @ git+https://github.com/cjhutto/vaderSentiment@44fc044" python scripts/vader_direct_scores.py <hutto> results/vader/scores_head_44fc044.json
+pwsh scripts/run_paper2agent.ps1 -RunDir <new folder> -Repo https://github.com/cjhutto/vaderSentiment -Commit 44fc044cd877310ee8278a0eadf34bcd50d41d06 -AgentName vader_Agent -Focus "<see results/vader>"
+<vader_Agent>/vaderSentiment-env/Scripts/python.exe scripts/run_vader_tools.py <vader_Agent> <hutto>
+uv run --no-project --with numpy python scripts/vader_paper_check.py results/vader/scores_paper2agent.json <hutto>
 ```
 
 ## Folder map
